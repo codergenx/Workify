@@ -1,0 +1,16 @@
+WORKFLOW 2: Worker Profile Creation and Service Listing
+
+Step 1: Worker registers on the website
+Step 2: Worker logs into account
+Step 3: Worker opens profile section
+Step 4: Worker enters skills (plumbing, electrical, etc.)
+Step 5: Worker enters pricing and location
+Step 6: Worker submits profile
+Step 7: System saves worker profile
+Step 8: Worker profile becomes visible to customers
+
+Features involved:
+• Worker Registration
+• Profile Creation
+• Service Listing
+• Profile Management
