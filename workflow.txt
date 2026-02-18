@@ -1,0 +1,18 @@
+WORKFLOW 3: Customer Booking and Review System
+
+Step 1: Customer logs in
+Step 2: Customer searches for worker
+Step 3: System displays worker profiles
+Step 4: Customer selects worker
+Step 5: Customer selects date and time
+Step 6: Customer submits booking request
+Step 7: Worker accepts or rejects booking
+Step 8: Service is completed
+Step 9: Customer gives rating and review
+Step 10: System saves review
+
+Features involved:
+• Worker Search
+• Booking System
+• Booking Status Management
+• Review and Rating System
