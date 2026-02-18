@@ -1,3 +1,22 @@
+WORKFLOW 1: Customer Registration and Login
+
+Step 1: Customer opens the Workify website
+Step 2: Customer clicks on Register button
+Step 3: Customer enters name, email, password, phone number
+Step 4: System validates input data
+Step 5: System creates customer account
+Step 6: Customer logs in using email and password
+Step 7: System verifies credentials
+Step 8: Customer is redirected to dashboard
+
+Features involved:
+• User Registration
+• User Login
+• Authentication
+• Customer Dashboard
+
+--------------------------------------------------
+
 WORKFLOW 2: Worker Profile Creation and Service Listing
 
 Step 1: Worker registers on the website
@@ -14,3 +33,24 @@ Features involved:
 • Profile Creation
 • Service Listing
 • Profile Management
+
+--------------------------------------------------
+
+WORKFLOW 3: Customer Booking and Review System
+
+Step 1: Customer logs in
+Step 2: Customer searches for worker
+Step 3: System displays worker profiles
+Step 4: Customer selects worker
+Step 5: Customer selects date and time
+Step 6: Customer submits booking request
+Step 7: Worker accepts or rejects booking
+Step 8: Service is completed
+Step 9: Customer gives rating and review
+Step 10: System saves review
+
+Features involved:
+• Worker Search
+• Booking System
+• Booking Status Management
+• Review and Rating System
