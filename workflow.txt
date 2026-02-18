@@ -1,0 +1,16 @@
+WORKFLOW 1: Customer Registration and Login
+
+Step 1: Customer opens the Workify website
+Step 2: Customer clicks on Register button
+Step 3: Customer enters name, email, password, phone number
+Step 4: System validates input data
+Step 5: System creates customer account
+Step 6: Customer logs in using email and password
+Step 7: System verifies credentials
+Step 8: Customer is redirected to dashboard
+
+Features involved:
+• User Registration
+• User Login
+• Authentication
+• Customer Dashboard
