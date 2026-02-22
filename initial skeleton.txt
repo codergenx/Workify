@@ -1,0 +1,549 @@
+================================================================================
+                        WORKIFY - WORKFLOW SKELETONS
+================================================================================
+
+################################################################################
+#                    WORKFLOW 1: REGISTRATION AND LOGIN                        #
+################################################################################
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         CUSTOMER PERSPECTIVE                               │
+└──────────────────────────────────────────────────────────────────────────┘
+
+REGISTRATION FLOW:
+------------------
+Step 1: Landing Page
+        → Customer sees homepage with "Register" and "Login" buttons
+        → Customer clicks "Register" button
+
+Step 2: Registration Page
+        → Form displays with fields:
+          • Full Name
+          • Email Address
+          • Password
+          • Confirm Password
+          • Phone Number
+        → Customer fills in all fields
+        → Customer clicks "Submit" button
+
+Step 3: System Validation
+        → System validates:
+          • Email format is correct
+          • Password meets requirements (min 8 characters)
+          • Phone number is valid
+          • Email is not already registered
+        → If validation fails: Show error message
+        → If validation passes: Proceed to Step 4
+
+Step 4: Account Creation
+        → System creates customer account in database
+        → System sends verification email (optional)
+        → Success message displayed
+        → Redirect to Login Page
+
+LOGIN FLOW:
+-----------
+Step 5: Login Page
+        → Form displays with fields:
+          • Email Address
+          • Password
+        → Customer enters credentials
+        → Customer clicks "Login" button
+
+Step 6: Authentication
+        → System verifies email and password
+        → If credentials invalid: Show error message
+        → If credentials valid: Proceed to Step 7
+
+Step 7: Customer Dashboard
+        → Customer redirected to dashboard
+        → Dashboard displays:
+          • Welcome message
+          • Search workers section
+          • Recent bookings
+          • Quick action buttons
+
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                          WORKER PERSPECTIVE                                │
+└──────────────────────────────────────────────────────────────────────────┘
+
+REGISTRATION FLOW:
+------------------
+Step 1: Landing Page
+        → Worker sees homepage with "Register" and "Login" buttons
+        → Worker toggles to "Worker" mode
+        → Worker clicks "Register" button
+
+Step 2: Registration Page
+        → Form displays with fields:
+          • Full Name
+          • Email Address
+          • Password
+          • Confirm Password
+          • Phone Number
+        → Worker fills in all fields
+        → Worker clicks "Submit" button
+
+Step 3: System Validation
+        → System validates:
+          • Email format is correct
+          • Password meets requirements
+          • Phone number is valid
+          • Email is not already registered
+        → If validation fails: Show error message
+        → If validation passes: Proceed to Step 4
+
+Step 4: Account Creation
+        → System creates worker account in database
+        → System sends verification email (optional)
+        → Success message displayed
+        → Redirect to Login Page
+
+LOGIN FLOW:
+-----------
+Step 5: Login Page
+        → Form displays with fields:
+          • Email Address
+          • Password
+        → Worker enters credentials
+        → Worker clicks "Login" button
+
+Step 6: Authentication
+        → System verifies email and password
+        → If credentials invalid: Show error message
+        → If credentials valid: Proceed to Step 7
+
+Step 7: Worker Dashboard
+        → Worker redirected to dashboard
+        → Dashboard displays:
+          • Welcome message
+          • Profile completion status
+          • Pending bookings
+          • Earnings summary
+          • Profile setup prompt (if incomplete)
+
+
+################################################################################
+#              WORKFLOW 2: WORKER PROFILE CREATION & SERVICE LISTING          #
+################################################################################
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                          WORKER PERSPECTIVE                                │
+└──────────────────────────────────────────────────────────────────────────┘
+
+PROFILE CREATION FLOW:
+----------------------
+Step 1: Worker Dashboard
+        → Worker logged in
+        → Dashboard shows "Complete Your Profile" card
+        → Worker clicks "Setup Profile" button
+
+Step 2: Profile Setup Page
+        → Multi-section form displays:
+          
+          SECTION A: Basic Information
+          • Profile Picture (upload)
+          • Bio/Description (textarea)
+          
+          SECTION B: Skills & Services
+          • Primary Skill (dropdown: Plumber, Electrician, Carpenter, etc.)
+          • Additional Skills (multi-select)
+          • Years of Experience
+          • Certifications (optional upload)
+          
+          SECTION C: Pricing
+          • Hourly Rate ($)
+          • Service Call Fee ($)
+          • Payment Methods Accepted
+          
+          SECTION D: Location & Availability
+          • Service Area (City/Region)
+          • Service Radius (miles)
+          • Available Days (checkboxes)
+          • Available Hours (time range)
+
+Step 3: Form Filling
+        → Worker fills all required fields
+        → Worker uploads profile picture
+        → Worker enters skills (e.g., "Plumbing, Pipe Repair, Installation")
+        → Worker sets pricing: $50/hour
+        → Worker sets location: "Downtown Area"
+        → Worker clicks "Save Profile" button
+
+Step 4: System Validation
+        → System validates:
+          • All required fields filled
+          • Price is valid number
+          • Location is valid
+        → If validation fails: Show field-specific errors
+        → If validation passes: Proceed to Step 5
+
+Step 5: Profile Saved
+        → System saves profile to database
+        → System updates worker status to "Active"
+        → Success message displayed
+        → Worker redirected to Profile Preview Page
+
+Step 6: Profile Preview
+        → Worker sees how their profile looks to customers
+        → Preview shows:
+          • Profile picture
+          • Name and skills
+          • Rating (0 stars - new worker)
+          • Pricing
+          • Location
+          • Bio
+          • Available times
+        → Options: "Edit Profile" or "Back to Dashboard"
+
+Step 7: Profile Goes Live
+        → System marks profile as "Visible to Customers"
+        → Profile now appears in customer searches
+        → Worker receives confirmation notification
+
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         CUSTOMER PERSPECTIVE                               │
+└──────────────────────────────────────────────────────────────────────────┘
+
+VIEW WORKER PROFILES:
+---------------------
+Step 1: Customer Dashboard
+        → Customer searches for workers
+        → Search results display worker profiles
+
+Step 2: Worker Profile Display
+        → Each worker card shows:
+          • Profile picture
+          • Name
+          • Primary skill
+          • Rating and reviews
+          • Hourly rate
+          • Location
+          • Years of experience
+        → Customer can click on any worker to see full profile
+
+Step 3: Full Profile View
+        → Detailed profile page shows:
+          • All skills
+          • Bio
+          • Availability
+          • Past reviews
+          • "Book Now" button
+
+
+################################################################################
+#           WORKFLOW 3: CUSTOMER BOOKING AND REVIEW SYSTEM                    #
+################################################################################
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                         CUSTOMER PERSPECTIVE                               │
+└──────────────────────────────────────────────────────────────────────────┘
+
+BOOKING FLOW:
+-------------
+Step 1: Customer Dashboard
+        → Customer logged in
+        → Customer clicks "Find Workers" or uses search bar
+
+Step 2: Search Workers
+        → Search interface displays:
+          • Search bar (keywords)
+          • Filter by:
+            - Skill type
+            - Price range
+            - Rating
+            - Location
+        → Customer enters: "Plumber" in search
+        → Customer clicks "Search" button
+
+Step 3: View Search Results
+        → System displays worker profiles matching "Plumber"
+        → Results show:
+          • Worker cards with basic info
+          • Sorting options (Rating, Price, Distance)
+        → Customer browses results
+
+Step 4: Select Worker
+        → Customer clicks on "John Martinez - Plumber"
+        → Full profile opens showing:
+          • Detailed information
+          • Reviews from other customers
+          • Availability calendar
+          • "Book Now" button
+
+Step 5: Booking Form
+        → Customer clicks "Book Now"
+        → Booking modal/page appears with:
+          • Date picker (calendar)
+          • Time slot selector
+          • Service description (textarea)
+          • Estimated duration
+          • Total cost estimate
+        → Customer selects:
+          • Date: March 15, 2026
+          • Time: 2:00 PM
+          • Description: "Kitchen sink leaking, needs repair"
+          • Duration: 2 hours
+
+Step 6: Submit Booking Request
+        → Customer reviews booking details
+        → Customer clicks "Submit Booking Request"
+        → System creates booking with status: "Pending"
+        → Confirmation message: "Booking request sent to worker"
+        → Customer redirected to "My Bookings" page
+
+Step 7: Booking Status Tracking
+        → Customer sees booking in "My Bookings"
+        → Status shows: "Pending - Waiting for worker confirmation"
+        → Customer can:
+          • View booking details
+          • Cancel booking (if still pending)
+          • Contact worker
+
+Step 8: Booking Confirmed
+        → Worker accepts booking (see worker flow)
+        → Customer receives notification
+        → Booking status changes to: "Confirmed"
+        → Customer sees:
+          • Confirmed date and time
+          • Worker contact information
+          • "Cancel Booking" option
+
+Step 9: Service Day
+        → On service date:
+          • Customer receives reminder notification
+          • Worker arrives and completes service
+          • Worker marks job as "Completed"
+
+Step 10: Review Prompt
+        → After service marked complete
+        → Customer receives notification: "How was your service?"
+        → Customer navigates to "My Bookings"
+        → Completed booking shows "Leave Review" button
+
+Step 11: Submit Review
+        → Customer clicks "Leave Review"
+        → Review form displays:
+          • Star rating (1-5 stars)
+          • Written review (textarea)
+          • Would you recommend? (Yes/No)
+        → Customer selects:
+          • Rating: 5 stars
+          • Review: "Excellent service! Fixed the leak quickly"
+          • Recommendation: Yes
+        → Customer clicks "Submit Review"
+
+Step 12: Review Saved
+        → System saves review
+        → Review appears on worker's profile
+        → Worker's average rating updates
+        → Customer sees confirmation: "Thank you for your review!"
+
+
+┌──────────────────────────────────────────────────────────────────────────┐
+│                          WORKER PERSPECTIVE                                │
+└──────────────────────────────────────────────────────────────────────────┘
+
+BOOKING MANAGEMENT FLOW:
+------------------------
+Step 1: Worker Dashboard
+        → Worker logged in
+        → Dashboard shows "Pending Bookings" section
+        → Notification: "You have 1 new booking request"
+
+Step 2: View Booking Request
+        → Worker clicks on pending booking
+        → Booking details display:
+          • Customer name: "Jane Smith"
+          • Service requested: "Kitchen sink repair"
+          • Date: March 15, 2026
+          • Time: 2:00 PM
+          • Estimated duration: 2 hours
+          • Customer message/description
+          • Total estimated earnings: $100
+
+Step 3: Review Request
+        → Worker checks their availability
+        → Worker reads service description
+        → Worker decides to accept or reject
+
+Step 4: Accept Booking
+        → Worker clicks "Accept Booking" button
+        → Confirmation dialog: "Accept this booking?"
+        → Worker confirms
+        → System updates booking status to "Confirmed"
+        → Customer receives notification
+        → Booking added to worker's calendar
+
+        OR
+
+        Reject Booking
+        → Worker clicks "Reject Booking" button
+        → Rejection reason form (optional)
+        → Worker confirms rejection
+        → System updates booking status to "Rejected"
+        → Customer receives notification
+        → Worker can suggest alternative dates (optional)
+
+Step 5: Upcoming Jobs View
+        → Worker sees confirmed booking in "Upcoming Jobs"
+        → Calendar view shows all scheduled bookings
+        → Worker can:
+          • View customer contact info
+          • Get directions to location
+          • Cancel booking (with reason)
+
+Step 6: Service Day
+        → On service date:
+          • Worker receives reminder notification
+          • Worker navigates to customer location
+          • Worker completes the service
+
+Step 7: Complete Job
+        → Worker opens booking in app
+        → Worker clicks "Mark as Completed"
+        → Completion form shows:
+          • Actual hours worked
+          • Final cost
+          • Additional notes
+        → Worker fills details:
+          • Hours: 1.5 hours
+          • Final cost: $75
+          • Notes: "Replaced worn gasket, leak fixed"
+        → Worker clicks "Complete Job"
+
+Step 8: Job Completed
+        → System updates booking status to "Completed"
+        → Customer receives notification to review
+        → Payment marked as due/completed
+        → Worker's earnings updated
+
+Step 9: Receive Review
+        → Customer submits review (see customer flow)
+        → Worker receives notification: "New review received"
+        → Worker can view review in their profile
+
+Step 10: View Reviews
+        → Worker dashboard shows:
+          • Current average rating (e.g., 4.8 stars)
+          • Total number of reviews
+          • Recent reviews list
+        → Worker can:
+          • View all reviews
+          • Reply to reviews (optional feature)
+          • Track rating trends
+
+
+################################################################################
+#                           PAGE/SCREEN SUMMARY                                #
+################################################################################
+
+CUSTOMER PAGES:
+---------------
+1. Landing Page (homepage)
+2. Register Page (customer registration form)
+3. Login Page (customer login form)
+4. Customer Dashboard (main hub after login)
+5. Search Workers Page (search and filter interface)
+6. Worker Profile Page (detailed worker view)
+7. Booking Form Page/Modal (create booking request)
+8. My Bookings Page (view all bookings: pending, confirmed, completed)
+9. Booking Details Page (single booking view)
+10. Review Form Page/Modal (rate and review worker)
+
+WORKER PAGES:
+-------------
+1. Landing Page (homepage)
+2. Register Page (worker registration form)
+3. Login Page (worker login form)
+4. Worker Dashboard (main hub after login)
+5. Profile Setup Page (create/edit worker profile)
+6. Profile Preview Page (see how profile looks to customers)
+7. Booking Requests Page (view pending booking requests)
+8. Booking Details Page (view single booking details)
+9. My Jobs Page (calendar view of all bookings)
+10. Complete Job Form Page/Modal (mark job complete)
+11. My Reviews Page (view all received reviews)
+
+SHARED COMPONENTS:
+------------------
+• Header/Navigation (user type toggle, logout)
+• Notification System (alerts for new bookings, reviews)
+• Authentication System (login/register backend)
+• Rating Component (star rating display and input)
+• Calendar Component (date/time picker)
+• Status Badges (pending, confirmed, completed, rejected)
+
+
+################################################################################
+#                        KEY SYSTEM INTERACTIONS                              #
+################################################################################
+
+DATA FLOW:
+----------
+
+1. REGISTRATION & LOGIN
+   User Input → Validation → Database Storage → Session Creation → Dashboard
+
+2. PROFILE CREATION
+   Worker Input → Validation → Database Storage → Profile Activation → Search Index
+
+3. BOOKING PROCESS
+   Customer Request → Database Storage → Worker Notification → 
+   Worker Response → Status Update → Customer Notification → 
+   Service Completion → Review Request → Review Storage → Profile Update
+
+STATUS STATES:
+--------------
+Booking Statuses:
+• Pending (waiting for worker response)
+• Confirmed (worker accepted)
+• Rejected (worker declined)
+• Completed (service finished)
+• Cancelled (customer or worker cancelled)
+• Reviewed (customer left review)
+
+Profile Statuses:
+• Incomplete (profile not finished)
+• Active (visible to customers)
+• Inactive (hidden from searches)
+• Suspended (account issues)
+
+
+################################################################################
+#                              NOTES                                           #
+################################################################################
+
+WORKFLOW 1 FOCUS:
+• Simple registration and login process
+• Clear separation between customer and worker accounts
+• Immediate dashboard access after login
+
+WORKFLOW 2 FOCUS:
+• Comprehensive profile creation for workers
+• Skills and pricing setup
+• Profile visibility to customers
+• Preview before going live
+
+WORKFLOW 3 FOCUS:
+• Easy worker search and discovery
+• Smooth booking request process
+• Status tracking throughout service lifecycle
+• Review system for quality assurance
+• Two-way communication (customer ↔ worker)
+
+FUTURE ENHANCEMENTS:
+• Email/SMS notifications
+• Payment integration
+• Real-time chat between customer and worker
+• Advanced search filters (certifications, insurance, etc.)
+• Photo upload for completed jobs
+• Dispute resolution system
+• Worker background checks
+• Multi-language support
+
+================================================================================
+                              END OF WORKFLOWS
+================================================================================
