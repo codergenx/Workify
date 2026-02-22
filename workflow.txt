@@ -54,3 +54,23 @@ Features involved:
 • Booking System
 • Booking Status Management
 • Review and Rating System
+
+
+
+WORKFLOW 4: Admin Management and Worker Approval
+
+Step 1: Admin logs into the admin panel
+Step 2: Admin views list of registered users and workers
+Step 3: Admin reviews newly registered worker profiles
+Step 4: Admin approves or rejects worker profiles
+Step 5: Admin views all booking requests
+Step 6: Admin can update or remove inappropriate bookings
+Step 7: Admin views user reviews and ratings
+Step 8: Admin can remove inappropriate reviews or block users if required
+
+Features involved:
+• Admin Login
+• Worker Approval System
+• User Management
+• Booking Management
+• Review Moderation
