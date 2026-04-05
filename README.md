@@ -61,4 +61,3 @@ It uses Express.js, PostgreSQL, and Prisma.
 - Approve Workers (`GET /workers/pending`, `PUT /workers/:id/approve` body: `isApproved: true`)
 - Moderate Bookings & Reviews (Delete, Hide endpoints)
 
-Happy Coding! 🚀
